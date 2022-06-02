@@ -1,27 +1,27 @@
 public class Application {
 
-	private string name;
-	private string id;
-	private string department;
-	private string title;
-	private string date;
-	private string docs;
-	private string proposition;
-	private string status;
+	private String name;
+	private String id;
+	private String department;
+	private String title;
+	private String date;
+	private String docs;
+	private String proposition;
+	private String status;
 
-	public string getId() {
+	public String getId() {
 		return this.id;
 	}
 
-	public string getDate() {
+	public String getDate() {
 		return this.date;
 	}
 
-	public string getProposition() {
+	public String getProposition() {
 		return this.proposition;
 	}
 
-	public string getCurrentStatus() {
+	public String getCurrentStatus() {
 		// TODO - implement Application.getCurrentStatus
 		throw new UnsupportedOperationException();
 	}
@@ -35,7 +35,7 @@ public class Application {
 	 * 
 	 * @param name
 	 */
-	public void setName(string name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 
@@ -43,7 +43,7 @@ public class Application {
 	 * 
 	 * @param id
 	 */
-	public void setId(string id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -51,7 +51,7 @@ public class Application {
 	 * 
 	 * @param department
 	 */
-	public void setDepartment(string department) {
+	public void setDepartment(String department) {
 		this.department = department;
 	}
 
@@ -59,7 +59,7 @@ public class Application {
 	 * 
 	 * @param title
 	 */
-	public void setTitle(string title) {
+	public void setTitle(String title) {
 		this.title = title;
 	}
 
@@ -67,7 +67,7 @@ public class Application {
 	 * 
 	 * @param date
 	 */
-	public void setDate(string date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 
@@ -75,7 +75,7 @@ public class Application {
 	 * 
 	 * @param docs
 	 */
-	public void setDocs(string docs) {
+	public void setDocs(String docs) {
 		this.docs = docs;
 	}
 
@@ -83,7 +83,7 @@ public class Application {
 	 * 
 	 * @param proposition
 	 */
-	public void setProposition(string proposition) {
+	public void setProposition(String proposition) {
 		this.proposition = proposition;
 	}
 
@@ -91,7 +91,7 @@ public class Application {
 	 * 
 	 * @param status
 	 */
-	public void setStatus(string status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
 

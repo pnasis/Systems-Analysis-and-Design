@@ -1,9 +1,9 @@
-public class Members extends User {
+public class Member extends User {
 
-	private string name;
-	private string signature;
+	private String name;
+	private String signature;
 
-	public string getName() {
+	public String getName() {
 		return this.name;
 	}
 
@@ -12,7 +12,7 @@ public class Members extends User {
 	 * @param vote
 	 * @param comment
 	 */
-	public void vote(bool vote, string comment) {
+	public void vote(boolean vote, String comment) {
 		// TODO - implement Members.vote
 		throw new UnsupportedOperationException();
 	}

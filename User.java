@@ -1,13 +1,13 @@
 public class User {
 
-	private string email;
-	private string password;
+	private String email;
+	private String password;
 
-	public string getEmail() {
+	public String getEmail() {
 		return this.email;
 	}
 
-	public string getPassword() {
+	public String getPassword() {
 		return this.password;
 	}
 

@@ -1,13 +1,13 @@
 public class President extends User {
 
-	private string name;
-	private string signature;
+	private String name;
+	private String signature;
 
 	/**
 	 * 
 	 * @param signature
 	 */
-	public void sign(string signature) {
+	public void sign(String signature) {
 		// TODO - implement President.sign
 		throw new UnsupportedOperationException();
 	}

@@ -1,9 +1,11 @@
+import java.util.ArrayList;
+
 public class Decision {
 
-	private ArrayList<bool> vote;
+	private ArrayList<Boolean> vote;
 	private ArrayList<String> comments;
-	private string signature;
-	private ArrayList<Members> members;
+	private String signature;
+	private ArrayList<Member> members;
 	private Member repporteur;
 
 	/**
@@ -19,12 +21,12 @@ public class Decision {
 	 * 
 	 * @param vote
 	 */
-	public void addVote(bool vote) {
+	public void addVote(boolean vote) {
 		// TODO - implement Decision.addVote
 		throw new UnsupportedOperationException();
 	}
 
-	public ArrayList<bool> getVotes() {
+	public ArrayList<Boolean> getVotes() {
 		// TODO - implement Decision.getVotes
 		throw new UnsupportedOperationException();
 	}
@@ -37,7 +39,7 @@ public class Decision {
 	 * 
 	 * @param signature
 	 */
-	public void setSignature(string signature) {
+	public void setSignature(String signature) {
 		this.signature = signature;
 	}
 

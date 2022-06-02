@@ -1,6 +1,6 @@
 public class Professor extends User {
 
-	private string name;
+	private String name;
 
 	public void createApplication() {
 		// TODO - implement Professor.createApplication
