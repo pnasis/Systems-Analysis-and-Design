@@ -27,7 +27,7 @@ public class Decision {
 
 	public ArrayList<Boolean> getVotes() {
 		// TODO - implement Decision.getVotes
-		throw new UnsupportedOperationException();
+		return vote;
 	}
 
 	public ArrayList<String> getComments() {
