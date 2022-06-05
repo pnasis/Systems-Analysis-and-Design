@@ -23,8 +23,7 @@ public class Application {
 	}
 
 	public String getCurrentStatus() {
-		// TODO - implement Application.getCurrentStatus
-		throw new UnsupportedOperationException();
+		return status;
 	}
 
 	public Decision getDecision() {
