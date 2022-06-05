@@ -8,6 +8,7 @@ public class Application {
 	private String docs;
 	private String proposition;
 	private String status;
+	private Decision decision;
 
 	public String getId() {
 		return this.id;
