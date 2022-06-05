@@ -2,6 +2,7 @@ public class Member extends User {
 
 	private String name;
 	private String signature;
+	private Application application;
 
 	public String getName() {
 		return this.name;
