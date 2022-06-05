@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Decision {
 
-	private ArrayList<Boolean> vote;
+	private ArrayList<Boolean> vote = new ArrayList<>();
 	private ArrayList<String> comments;
 	private String signature;
 	private ArrayList<Member> members;
@@ -14,7 +14,7 @@ public class Decision {
 	 */
 	public void addComments(String comment) {
 		// TODO - implement Decision.addComments
-		throw new UnsupportedOperationException();
+		comments.add(comment);
 	}
 
 	/**
@@ -22,8 +22,7 @@ public class Decision {
 	 * @param vote
 	 */
 	public void addVote(boolean vote) {
-		// TODO - implement Decision.addVote
-		throw new UnsupportedOperationException();
+		this.vote.add(vote);
 	}
 
 	public ArrayList<Boolean> getVotes() {
