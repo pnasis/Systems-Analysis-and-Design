@@ -1,12 +1,12 @@
 public class Secretary extends User {
-
+	
+	private Application application = new Application();
 	/**
 	 * 
 	 * @param status
 	 */
 	public void updateStatus(String status) {
-		// TODO - implement Secretary.updateStatus
-		throw new UnsupportedOperationException();
+		application.setStatus(status);
 	}
 
 }

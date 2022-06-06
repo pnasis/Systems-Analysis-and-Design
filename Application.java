@@ -28,7 +28,7 @@ public class Application {
 
 	public Decision getDecision() {
 		// TODO - implement Application.getDecision
-		throw new UnsupportedOperationException();
+		return decision;
 	}
 
 	/**
