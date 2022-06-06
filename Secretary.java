@@ -1,10 +1,11 @@
 public class Secretary extends User {
 	
 	private Application application = new Application();
-	/**
-	 * 
-	 * @param status
-	 */
+	
+	public Secretary(String email, String password)
+	{
+		super();
+	}
 	public void updateStatus(String status) {
 		application.setStatus(status);
 	}
