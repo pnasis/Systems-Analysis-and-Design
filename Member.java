@@ -7,7 +7,7 @@ public class Member extends User {
 	
 	public Member(String email, String password, String name, String signature)
 	{
-		super();
+		super();// To eixa super(email,signature) kai moy ebgaze error
 		this.name = name;
 		this.signature = signature;
 	}
@@ -20,5 +20,6 @@ public class Member extends User {
 		
 		throw new UnsupportedOperationException();
 	}
+	
 
 }
