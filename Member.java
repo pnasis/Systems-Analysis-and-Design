@@ -5,9 +5,11 @@ public class Member extends User {
 	private Application application;
 	
 	
-	public Member(String email, String password)
+	public Member(String email, String password, String name, String signature)
 	{
 		super();
+		this.name = name;
+		this.signature = signature;
 	}
 	
 	public String getName() {
