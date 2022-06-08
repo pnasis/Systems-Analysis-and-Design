@@ -1,7 +1,7 @@
 public class Application {
 
 	private String name;
-	private String id;
+	private String id; //it will be auto generated.
 	private String department;
 	private String title;
 	private String date;
@@ -10,6 +10,15 @@ public class Application {
 	private String status;
 	private Decision decision;
 
+	public Application(String name, String department, String title, String date, String docs) {
+		
+		this.name = name;
+		this.department = department;
+		this.title = title;
+		this.date = date;
+		this.docs = docs;
+	}
+	
 	public String getId() {
 		return this.id;
 	}
@@ -23,13 +32,11 @@ public class Application {
 	}
 
 	public String getCurrentStatus() {
-		// TODO - implement Application.getCurrentStatus
-		throw new UnsupportedOperationException();
+		return this.status;
 	}
 
 	public Decision getDecision() {
-		// TODO - implement Application.getDecision
-		throw new UnsupportedOperationException();
+		return this.decision;
 	}
 
 	/**
@@ -101,8 +108,7 @@ public class Application {
 	 * @param decision
 	 */
 	public void setDecision(Decision decision) {
-		// TODO - implement Application.setDecision
-		throw new UnsupportedOperationException();
+		this.decision = decision;
 	}
 
 }
