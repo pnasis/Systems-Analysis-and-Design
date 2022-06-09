@@ -1,12 +1,21 @@
 public class Secretary extends User {
-
-	/**
-	 * 
-	 * @param status
-	 */
+	
+	private ArrayList<Application> applications;
+	
+	public Secretary(String email, String password, ArrayList <Application> list)
+	{
+		super(email,password);
+		this.applications == list;
+	}
 	public void updateStatus(String status) {
-		// TODO - implement Secretary.updateStatus
-		throw new UnsupportedOperationException();
+		for (Application a : applications)
+		{
+			if (a.getId() == app.getId())
+			{
+				a.setStatus(status);
+			}
+		}
+		application.setStatus(status);
 	}
 
 }

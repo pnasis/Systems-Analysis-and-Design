@@ -23,13 +23,12 @@ public class Application {
 	}
 
 	public String getCurrentStatus() {
-		// TODO - implement Application.getCurrentStatus
-		throw new UnsupportedOperationException();
+		return status;
 	}
 
 	public Decision getDecision() {
 		// TODO - implement Application.getDecision
-		throw new UnsupportedOperationException();
+		return decision;
 	}
 
 	/**
