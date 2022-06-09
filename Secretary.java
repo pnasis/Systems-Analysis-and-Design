@@ -1,6 +1,6 @@
 public class Secretary extends User {
 	
-	private Application applications;
+	private ArrayList<Application> applications;
 	
 	public Secretary(String email, String password, ArrayList <Application> list)
 	{
