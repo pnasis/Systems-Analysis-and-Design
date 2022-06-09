@@ -31,7 +31,7 @@ public class Application {
 		return this.proposition;
 	}
 
-	public String getCurrentStatus() {
+	public String getStatus() {
 		return this.status;
 	}
 
