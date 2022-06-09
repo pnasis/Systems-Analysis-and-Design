@@ -2,62 +2,47 @@ import java.util.ArrayList;
 
 public class Decision {
 
+	/* Fields */
 	private ArrayList<Boolean> vote = new ArrayList<>();
 	private ArrayList<String> comments;
 	private String signature;
 	private ArrayList<Member> members;
-	private Member repporteur;
+	private Member rapporteur;
 
-	/**
-	 * 
-	 * @param comment
-	 */
-	public void addComments(String comment) {
-		// TODO - implement Decision.addComments
-		comments.add(comment);
+	/* Methods */
+	
+	// Constructor
+	public Decision ()
+	{
+	
 	}
-
-	/**
-	 * 
-	 * @param vote
-	 */
-	public void addVote(boolean vote) {
-		this.vote.add(vote);
-	}
-
+	
+	// Getters
 	public ArrayList<Boolean> getVotes() {
-		// TODO - implement Decision.getVotes
-		throw new UnsupportedOperationException();
+		return this.vote;
 	}
-
 	public ArrayList<String> getComments() {
 		return this.comments;
 	}
-
-	/**
-	 * 
-	 * @param signature
-	 */
+	// Setters
+	public void setRapporteur(Member rapporteur) {
+		this.rapporteur = rapporteur;
+	}
 	public void setSignature(String signature) {
 		this.signature = signature;
 	}
 
-	/**
-	 * 
-	 * @param member
-	 */
+	// Other Methods
 	public void addMember(Member member) {
-		// TODO - implement Decision.addMember
-		throw new UnsupportedOperationException();
+		members.add(member);
 	}
 
-	/**
-	 * 
-	 * @param rapporteur
-	 */
-	public void setRapporteur(Member rapporteur) {
-		// TODO - implement Decision.setRapporteur
-		throw new UnsupportedOperationException();
+	public void addComments(String comment) {
+		comments.add(comment);
 	}
 
+	public void addVote(boolean vote) {
+		this.vote.add(vote);
+	}
+	
 }
