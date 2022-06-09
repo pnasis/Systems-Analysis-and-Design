@@ -1,15 +1,17 @@
+import java.util.ArrayList;
+
 public class Member extends User {
 
 	private String name;
 	private String signature;
+	private Application application;
 	private ArrayList<Application> applications;
 	
 	
-	public Member(String email, String password, String name, String signature, 
-		      ArrayList<Application> list)
+	public Member(String email, String password, String name, String signature,
+			ArrayList<Application> list)
 	{
-		
-		super(email,password);// To eixa super(email,signature) kai moy ebgaze error
+		super(email, password);// To eixa super(email,signature) kai moy ebgaze error
 		this.name = name;
 		this.signature = signature;
 		this.applications = list;
@@ -21,15 +23,16 @@ public class Member extends User {
 
 	public void vote(boolean vote, String comment, Application app) {
 		Decision aDecision;
-		
-		for(Application a : application) {
+		for(Application a: applications) {
 			if(a.getId() == app.getId()) {
 				aDecision = a.getDecision();
 				aDecision.addVote(vote);
 				aDecision.addComments(comment);
-				a.setDecision(aDecision); 
+				a.setDecision(aDecision);
 			}
 		}
+		
+		
 	}
 	
 
