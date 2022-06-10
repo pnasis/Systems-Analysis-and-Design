@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Application {
 
 	private String name;
@@ -12,7 +14,9 @@ public class Application {
 
 	public Application(String name, String department, String title, String date, String docs)
 	{
+		Random rnd = new Random();
 		this.name = name;
+		this.id = "AM"+ rnd.nextInt(99999);
 		this.department = department;
 		this.title = title;
 		this.date = date;

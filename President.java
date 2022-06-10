@@ -6,6 +6,10 @@ public class President extends User {
 	private String signature;
 	private Application application;
 	
+	public String getName() {
+		return name;
+	}
+
 	public President(String email, String password, String name, String signature, Application application)
 	{	
 		super(email,password);
