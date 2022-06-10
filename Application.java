@@ -10,6 +10,16 @@ public class Application {
 	private String status;
 	private Decision decision;
 
+	public Application(String name, String department, String title, String date, String docs)
+	{
+		this.name = name;
+		this.department = department;
+		this.title = title;
+		this.date = date;
+		this.docs = docs;
+		decision = new Decision();
+	}
+	
 	public String getId() {
 		return this.id;
 	}
@@ -101,7 +111,7 @@ public class Application {
 	 */
 	public void setDecision(Decision decision) {
 		// TODO - implement Application.setDecision
-		throw new UnsupportedOperationException();
+		this.decision = decision;
 	}
 
 }

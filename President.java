@@ -4,61 +4,31 @@ public class President extends User {
 
 	private String name;
 	private String signature;
-	private ArrayList<Application> applications;
+	private Application application;
 	
-	
-	public President(String email, String password, String name, String signature,
-					 ArrayList<Application> list)
+	public President(String email, String password, String name, String signature, Application application)
 	{	
 		super(email,password);
 		this.name = name;
 		this.signature = signature;	
-		this.applications = list;
+		this.application = application;
 	}
 	
-	public void sign(String signature, Application app) 
+	public void sign(String signature) 
 	{
-		Decision aDecision;
-		
-		for(Application a : applications)
-		{
-			if(a.getId() == app.getId())
-			{
-				aDecision = a.getDecision();
-				aDecision.setSignature(signature);
-				a.setDecision(aDecision);
-			}
-		}
+		application.getDecision().setSignature(signature);
 	}
 
 
-	public void addRapporteur(Member rapporteur, Application app) 
+	public void addRapporteur(Member rapporteur) 
 	{
-		Decision aDecision;
-		for(Application a : applications)
-		{
-			if(a.getId() == app.getId())
-			{
-				aDecision = a.getDecision();
-				aDecision.setRapporteur(rapporteur);
-				a.setDecision(aDecision);
-			}
-		}
+		application.getDecision().setRapporteur(rapporteur);
 	}
 
 
-	public void setMember(Member member, Application app) 
+	public void setMember(Member member) 
 	{
-		Decision aDecision;
-		for(Application a : applications)
-		{
-			if(a.getId() == app.getId())
-			{
-				aDecision = a.getDecision();
-				aDecision.addMember(member);
-				a.setDecision(aDecision);
-			}
-		}	
+		application.getDecision().addMember(member);
 	}
 	
 	

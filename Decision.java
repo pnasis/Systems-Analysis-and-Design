@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Decision {
 
 	/* Fields */
-	private ArrayList<Boolean> vote = new ArrayList<>();
+	private ArrayList<Boolean> vote;
 	private ArrayList<String> comments;
 	private String signature;
 	private ArrayList<Member> members;
@@ -14,7 +14,9 @@ public class Decision {
 	// Constructor
 	public Decision ()
 	{
-	
+		vote = new ArrayList<>();
+		comments = new ArrayList<>();
+		members = new ArrayList<>();
 	}
 	
 	// Getters
