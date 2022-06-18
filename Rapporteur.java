@@ -2,27 +2,21 @@ import java.util.ArrayList;
 
 public class Rapporteur extends Member {
 
-	private ArrayList<Application> applications;
 	private String name;
 	private String signature;
-
+	private Application application;
 
 	
-	public Rapporteur(String email, String password, String name, String signature,
-					  ArrayList<Application> list)
+	public Rapporteur(String email, String password, String name, String signature, Application application)
 	{
-		super(email,password, name, signature, list);
-		this.applications = list;
+		super(email,password, name, signature, application);
+		this.application = application;
 	}
 	
 	
-	public void propose(String proposition, Application app) 
+	public void propose(String proposition) 
 	{
-		for(Application a : applications)
-			if(a.getId() == app.getId())
-			{
-				a.setProposition(proposition);
-			}
+		application.setProposition(proposition);
 	}
 
 }

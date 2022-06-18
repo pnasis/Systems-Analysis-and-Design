@@ -1,21 +1,18 @@
 public class Secretary extends User {
 	
-	private ArrayList<Application> applications;
+	Application application;
 	
-	public Secretary(String email, String password, ArrayList <Application> list)
+	public Secretary(String email, String password, Application application)
 	{
 		super(email,password);
-		this.applications == list;
+		this.application = application;
 	}
-	public void updateStatus(String status) {
-		for (Application a : applications)
-		{
-			if (a.getId() == app.getId())
-			{
-				a.setStatus(status);
-			}
-		}
+	
+	public void updateStatus(String status)
+	{
 		application.setStatus(status);
 	}
+
+
 
 }

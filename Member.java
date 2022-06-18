@@ -5,34 +5,22 @@ public class Member extends User {
 	private String name;
 	private String signature;
 	private Application application;
-	private ArrayList<Application> applications;
 	
 	
-	public Member(String email, String password, String name, String signature,
-			ArrayList<Application> list)
+	public Member(String email, String password, String name, String signature, Application application)
 	{
-		super(email, password);// To eixa super(email,signature) kai moy ebgaze error
+		super(email, password);
 		this.name = name;
 		this.signature = signature;
-		this.applications = list;
+		this.application = application;
 	}
 	
 	public String getName() {
 		return this.name;
 	}
 
-	public void vote(boolean vote, String comment, Application app) {
-		Decision aDecision;
-		for(Application a: applications) {
-			if(a.getId() == app.getId()) {
-				aDecision = a.getDecision();
-				aDecision.addVote(vote);
-				aDecision.addComments(comment);
-				a.setDecision(aDecision);
-			}
-		}
-		
-		
+	public void vote(boolean vote, String comment) {
+		application.getDecision().addVote(vote);
 	}
 	
 
