@@ -10,7 +10,7 @@ public class Main {
 		//Creating an Application.
 		while(again.equals("yes"))
 		{
-			Professor professor = new Professor("john.doe@uon.edu.gr","profes$oR","John");
+			Professor professor = new Professor("john.doe@uom.edu.gr","profes$oR","John");
 			System.out.print("********ABOUT PROFESSOR********\n");
 			System.out.print("Welcome " + professor.getEmail() +"! \n\nPlease fill out the form:\n");
 			System.out.print("Your name: ");
@@ -25,7 +25,10 @@ public class Main {
 			String docs = keyboard.nextLine();
 			
 			if(docs.equals("no"))
+			{
+				System.out.println("Your application is incomplete!");
 				break;
+			}
 			
 			Application application = professor.createApplication(name, title, department, date, docs);
 			System.out.println("\nYour Application has been created and submited successfully!\nYour application ID is: " + application.getId());
