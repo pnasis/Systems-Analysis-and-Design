@@ -41,80 +41,43 @@ public class Application {
 	}
 
 	public Decision getDecision() {
-		// TODO - implement Application.getDecision
 		return decision;
 	}
 
-	/**
-	 * 
-	 * @param name
-	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
-	/**
-	 * 
-	 * @param id
-	 */
 	public void setId(String id) {
 		this.id = id;
 	}
 
-	/**
-	 * 
-	 * @param department
-	 */
 	public void setDepartment(String department) {
 		this.department = department;
 	}
 
-	/**
-	 * 
-	 * @param title
-	 */
 	public void setTitle(String title) {
 		this.title = title;
 	}
 
-	/**
-	 * 
-	 * @param date
-	 */
 	public void setDate(String date) {
 		this.date = date;
 	}
 
-	/**
-	 * 
-	 * @param docs
-	 */
 	public void setDocs(String docs) {
 		this.docs = docs;
 	}
 
-	/**
-	 * 
-	 * @param proposition
-	 */
 	public void setProposition(String proposition) {
 		this.proposition = proposition;
 	}
 
-	/**
-	 * 
-	 * @param status
-	 */
 	public void setStatus(String status) {
 		this.status = status;
 	}
 
-	/**
-	 * 
-	 * @param decision
-	 */
+
 	public void setDecision(Decision decision) {
-		// TODO - implement Application.setDecision
 		this.decision = decision;
 	}
 

@@ -23,9 +23,21 @@ public class Decision {
 	public ArrayList<Boolean> getVotes() {
 		return this.vote;
 	}
+	
 	public ArrayList<String> getComments() {
 		return this.comments;
 	}
+	
+	
+	public ArrayList<Member> getMembers() {
+		return members;
+	}
+
+	
+	public Member getRapporteur() {
+		return rapporteur;
+	}
+
 	// Setters
 	public void setRapporteur(Member rapporteur) {
 		this.rapporteur = rapporteur;
