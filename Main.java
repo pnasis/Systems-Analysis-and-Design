@@ -170,21 +170,7 @@ public class Main {
 				break;
 			}
 				
-		}
-
-
-//		while(again.equals("yes"))
-//		{
-//			
-//			
-//			
-//				
-//			//Finish.
-//			System.out.print("Do you wish to continue with a new application?(yes/no): ");
-//			again = keyboard.nextLine();
-//			System.out.println();
-//		}
-//			
+		}	
 		
 	}
 }
