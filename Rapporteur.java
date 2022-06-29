@@ -1,11 +1,11 @@
-import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Rapporteur extends Member {
 
 	private String name;
 	private String signature;
 	private Application application;
-
+	private Scanner keyboard = new Scanner(System.in);
 	
 	public Rapporteur(String email, String password, String name, String signature, Application application)
 	{
@@ -14,9 +14,11 @@ public class Rapporteur extends Member {
 	}
 	
 	
-	public void propose(String proposition) 
+	public void propose() 
 	{
-		application.setProposition(proposition);
+		System.out.print("Please propose the application with ID " + application.getId() + ": ");
+		String proposal = keyboard.next();
+		application.setProposition(proposal);
 	}
 
 }

@@ -26,23 +26,9 @@ public class Main {
 				//Creating an Application.
 				System.out.println("********ABOUT PROFESSOR********");
 				System.out.println("Welcome " + professor.getEmail() +"! \n\nPlease fill out the form:");
-				System.out.print("Your name: ");
-				String name = keyboard.next();
-				System.out.print("Your department: ");
-				String department = keyboard.next();
-				System.out.print("Title: ");
-				String title = keyboard.next();
-				System.out.print("Date: ");
-				String date = keyboard.next();
-				System.out.print("Docs(yes/no): ");
-				String docs = keyboard.next();
-				
-				if(docs.equals("no"))
+				Application application = professor.createApplication();
+				if(application != null)
 				{
-					System.out.println("\nYour application is incomplete!\n");
-				}
-				else {
-					Application application = professor.createApplication(name, title, department, date, docs);
 					System.out.println("\nYour Application has been created and submited successfully!\nYour application ID is: " + application.getId());
 					listOfApplications.add(application);
 					System.out.println("You application status is: "+ application.getCurrentStatus() +".\n");
@@ -74,53 +60,32 @@ public class Main {
 				Member member4 = new Member("Member4", "member4", "Member 4" ,"Member 4", application);
 				Rapporteur rapporteur = new Rapporteur("Rapporteur", "rapporteur", "Rapporteur", "Rapporteur", application);
 				
+				
 				//President is signing the application and setting the members and the rapporteur.
 				System.out.print("\n********ABOUT PRESIDENT********\n");
 				System.out.print("Welcome " + president.getName() + "!\n");
-				System.out.print("Please sign the application with ID " + application.getId() + ": ");
-				String signature = keyboard.next();
-				president.sign(signature);
+				
+				president.sign();
 				president.setMember(member1);
 				president.setMember(member2);
 				president.setMember(member3);
 				president.setMember(member4);
 				president.addRapporteur(rapporteur);
 				
+				
 				//The secretary is updating the status to "Under Evaluation".
-				System.out.println("\n********ABOUT SECRETARY********\nApplication status has been set to 'Under Evaluation'.\n");
+				System.out.println("\n********ABOUT SECRETARY********\nApplication status has been set to 'Under Evaluation'.");
 				secretary.updateStatus("Under Evaluation");
+				
 				
 				//The Rapporteur is proposing the application and voting.
 				System.out.print("\n********ABOUT RAPPORTEUR********\n");
-				System.out.print("Please propose the application with ID " + application.getId() + ": ");
-				String proposal = keyboard.next();
-				
 				Rapporteur selectedRapporteur = (Rapporteur) application.getDecision().getRapporteur();
-				selectedRapporteur.propose(proposal);
-				
-				System.out.print("Vote for the application (true/false): ");
-				String temp = keyboard.next();
-				boolean vote;
-				int possitive = 0;
-				int negative = 0;
-				if(temp.equals("true"))
-				{
-					vote = true;
-					possitive++;
-				}	
-				else
-				{
-					vote = false;
-					negative++;
-				}
-					
-				System.out.print("Write some comments about your vote: ");
-				String comments = keyboard.next();
-				rapporteur.vote(vote, comments);
+				selectedRapporteur.propose();				
+				rapporteur.vote();
 				
 				//Members are voting.
-				System.out.print("\n\n********ABOUT MEMBERS********\n");
-				
+				System.out.print("\n********ABOUT MEMBERS********\n");
 				ArrayList<Member> members = application.getDecision().getMembers();
 				System.out.println();
 				
@@ -129,25 +94,20 @@ public class Main {
 				{
 					System.out.println("Member" + (i));
 					System.out.println("--------");
-					System.out.print("Vote for the application (true/false): ");
-					boolean votem;
-					String temp2 = keyboard.next();
-					if(temp2.equals("true"))
-					{
-						votem = true;
-						possitive++;
-					}
-					else
-					{
-						votem = false;
-						negative++;
-					}
-					System.out.print("Write some comments about your vote: ");
-					String commentsm = keyboard.next();
-					member.vote(votem, commentsm);
+					member.vote();
 					System.out.println();
 					
 					i++;
+				}
+				
+				int possitive = 0;
+				int negative = 0;
+				for(boolean vote : application.getDecision().getVotes())
+				{
+					if(vote)
+						possitive++;
+					else
+						negative++;
 				}
 				
 				//The secretary is updating the status to "Under Evaluation".

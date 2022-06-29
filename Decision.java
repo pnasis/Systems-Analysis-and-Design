@@ -42,6 +42,7 @@ public class Decision {
 	public void setRapporteur(Member rapporteur) {
 		this.rapporteur = rapporteur;
 	}
+	
 	public void setSignature(String signature) {
 		this.signature = signature;
 	}

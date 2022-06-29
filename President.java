@@ -1,10 +1,11 @@
-import java.util.ArrayList;
+import java.util.Scanner;
 
 public class President extends User {
 
 	private String name;
 	private String signature;
 	private Application application;
+	private Scanner keyboard = new Scanner(System.in);
 	
 	public String getName() {
 		return name;
@@ -18,24 +19,20 @@ public class President extends User {
 		this.application = application;
 	}
 	
-	public void sign(String signature) 
+	public void sign() 
 	{
+		System.out.print("Please sign the application with ID " + application.getId() + ": ");
+		signature = keyboard.next();
 		application.getDecision().setSignature(signature);
 	}
-
 
 	public void addRapporteur(Member rapporteur) 
 	{
 		application.getDecision().setRapporteur(rapporteur);
 	}
 
-
 	public void setMember(Member member) 
 	{
 		application.getDecision().addMember(member);
 	}
-	
-	
-
-
 }
