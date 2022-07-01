@@ -16,7 +16,8 @@ public class Main {
 					+ "Choose an option:\n"
 					+ "1)Submit an Application\n"
 					+ "2)Find an application with id in order to review it\n"
-					+ "3)Exit\n"
+					+ "3)Export Application (printData)\n"
+					+ "4)Exit\n"
 					+ "Type 1, 2 or 3: ");
 			int option = keyboard.nextInt();
 			System.out.println();
@@ -58,7 +59,7 @@ public class Main {
 				Member member2 = new Member("Member2", "member2", "Member 2" ,"Member 2", application);
 				Member member3 = new Member("Member3", "member3", "Member 3" ,"Member 3", application);
 				Member member4 = new Member("Member4", "member4", "Member 4" ,"Member 4", application);
-				Rapporteur rapporteur = new Rapporteur("Rapporteur", "rapporteur", "Rapporteur", "Rapporteur", application);
+				Member member5 = new Member("Rapporteur", "rapporteur", "Rapporteur", "Rapporteur", application);
 				
 				
 				//President is signing the application and setting the members and the rapporteur.
@@ -70,7 +71,7 @@ public class Main {
 				president.setMember(member2);
 				president.setMember(member3);
 				president.setMember(member4);
-				president.addRapporteur(rapporteur);
+				president.addRapporteur(member5);
 				
 				
 				//The secretary is updating the status to "Under Evaluation".
@@ -82,7 +83,7 @@ public class Main {
 				System.out.print("\n********ABOUT RAPPORTEUR********\n");
 				Rapporteur selectedRapporteur = (Rapporteur) application.getDecision().getRapporteur();
 				selectedRapporteur.propose();				
-				rapporteur.vote();
+				selectedRapporteur.vote();
 				
 				//Members are voting.
 				System.out.print("\n********ABOUT MEMBERS********\n");
@@ -126,8 +127,18 @@ public class Main {
 			
 			if(option==3)
 			{
+				for(Application app : listOfApplications)
+				{
+					app.printData();
+					System.out.println();
+				}
+			}
+			
+			if(option==4)
+			{
 				System.out.println("The program has been terminated.\n");
 				break;
+
 			}
 				
 		}	

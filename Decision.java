@@ -7,7 +7,7 @@ public class Decision {
 	private ArrayList<String> comments;
 	private String signature;
 	private ArrayList<Member> members;
-	private Member rapporteur;
+	private Rapporteur rapporteur;
 
 	/* Methods */
 	
@@ -40,7 +40,7 @@ public class Decision {
 
 	// Setters
 	public void setRapporteur(Member rapporteur) {
-		this.rapporteur = rapporteur;
+		this.rapporteur = (Rapporteur) rapporteur;
 	}
 	
 	public void setSignature(String signature) {
