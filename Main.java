@@ -18,10 +18,11 @@ public class Main {
 					+ "2)Find an application with id in order to review it\n"
 					+ "3)Export Application (printData)\n"
 					+ "4)Exit\n"
-					+ "Type 1, 2 or 3: ");
+					+ "Type 1, 2, 3 or 4: ");
 			int option = keyboard.nextInt();
 			System.out.println();
 			
+			//The process of creating an application is staring.
 			if(option==1)
 			{
 				//Creating an Application.
@@ -36,13 +37,13 @@ public class Main {
 				}
 			}
 			
+			//The process of review starts.
 			if(option==2)
 			{
 				System.out.print("Enter the application id: ");
 				String appId = keyboard.next();
 				
 				Application application = null;
-				
 				for(Application app : listOfApplications)
 				{
 					if(app.getId().equals(appId))
@@ -59,7 +60,8 @@ public class Main {
 				Member member2 = new Member("Member2", "member2", "Member 2" ,"Member 2", application);
 				Member member3 = new Member("Member3", "member3", "Member 3" ,"Member 3", application);
 				Member member4 = new Member("Member4", "member4", "Member 4" ,"Member 4", application);
-				Member member5 = new Member("Rapporteur", "rapporteur", "Rapporteur", "Rapporteur", application);
+				Rapporteur member5 = new Rapporteur("Rapporteur", "rapporteur", "Rapporteur", "Rapporteur", application);
+				//We consider there is a rapporteur created by default.
 				
 				
 				//President is signing the application and setting the members and the rapporteur.
@@ -77,11 +79,10 @@ public class Main {
 				//The secretary is updating the status to "Under Evaluation".
 				System.out.println("\n********ABOUT SECRETARY********\nApplication status has been set to 'Under Evaluation'.");
 				secretary.updateStatus("Under Evaluation");
-				
-				
+								
 				//The Rapporteur is proposing the application and voting.
 				System.out.print("\n********ABOUT RAPPORTEUR********\n");
-				Rapporteur selectedRapporteur = (Rapporteur) application.getDecision().getRapporteur();
+				Rapporteur selectedRapporteur = application.getDecision().getRapporteur();
 				selectedRapporteur.propose();				
 				selectedRapporteur.vote();
 				
@@ -111,7 +112,7 @@ public class Main {
 						negative++;
 				}
 				
-				//The secretary is updating the status to "Under Evaluation".
+				//The secretary is updating the status to "Approved" or "Disapproved" based on the votes.
 				if(possitive > negative)
 				{
 					secretary.updateStatus("Approved");
@@ -124,7 +125,7 @@ public class Main {
 				}
 			}
 			
-			
+			//"Exporting" the application.
 			if(option==3)
 			{
 				for(Application app : listOfApplications)
@@ -134,6 +135,7 @@ public class Main {
 				}
 			}
 			
+			//The program terminates.
 			if(option==4)
 			{
 				System.out.println("The program has been terminated.\n");
@@ -142,6 +144,5 @@ public class Main {
 			}
 				
 		}	
-		
 	}
 }

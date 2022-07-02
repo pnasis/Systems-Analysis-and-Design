@@ -22,11 +22,11 @@ public class President extends User {
 	public void sign() 
 	{
 		System.out.print("Please sign the application with ID " + application.getId() + ": ");
-		signature = keyboard.next();
+		String signature = keyboard.next();
 		application.getDecision().setSignature(signature);
 	}
 
-	public void addRapporteur(Member rapporteur) 
+	public void addRapporteur(Rapporteur rapporteur) 
 	{
 		application.getDecision().setRapporteur(rapporteur);
 	}
