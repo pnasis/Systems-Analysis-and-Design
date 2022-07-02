@@ -1,11 +1,11 @@
-import java.io.File;
-import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Professor extends User {
 	
 	/* Fields */
 	private String name;
 	private Application application;
+	private Scanner keyboard = new Scanner(System.in);
 	
 	/* Methods */
 	
@@ -17,11 +17,28 @@ public class Professor extends User {
 	}
 	
 	// Application Creator
-	public Application createApplication(String name, String title, String dep, String date, String docs) 
+	public Application createApplication() 
 	{
 		// New Application
-		application = new Application(name, dep, title, date, docs); 
+		System.out.print("Your name: ");
+		String name = keyboard.next();
+		System.out.print("Your department: ");
+		String department = keyboard.next();
+		System.out.print("Title: ");
+		String title = keyboard.next();
+		System.out.print("Date: ");
+		String date = keyboard.next();
+		System.out.print("Docs(yes/no): ");
+		String docs = keyboard.next();
+		
+		if(docs.equals("no"))
+		{
+			System.out.println("\nYour application is incomplete!\n");
+		}
+		else {
+		application = new Application(name, department, title, date, docs); 
 		application.setStatus("Submited"); // Status is automatically set to Submitted when an Application is created
+		}
 		
 		return application;
 	}

@@ -24,6 +24,26 @@ public class Application {
 		decision = new Decision();
 	}
 	
+	public String getName() {
+		return name;
+	}
+
+	public String getDepartment() {
+		return department;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public String getDocs() {
+		return docs;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
 	public String getId() {
 		return this.id;
 	}
@@ -80,5 +100,16 @@ public class Application {
 	public void setDecision(Decision decision) {
 		this.decision = decision;
 	}
-
+	
+	public void printData() {
+		System.out.println("************************************");
+		System.out.println("ID: " + getId());
+		System.out.println("Name: " + getName());
+		System.out.println("Department: " + getDepartment());
+		System.out.println("Title: " + getTitle());
+		System.out.println("Date: " + getDate());
+		System.out.println("Docs: " + getDocs());
+		System.out.println("Status: " + getStatus());
+		System.out.println("************************************");
+	}
 }
