@@ -35,4 +35,5 @@ public class President extends User {
 	{
 		application.getDecision().addMember(member);
 	}
+
 }

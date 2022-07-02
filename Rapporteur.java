@@ -6,6 +6,7 @@ public class Rapporteur extends Member {
 	private String signature;
 	private Application application;
 	private Scanner keyboard = new Scanner(System.in);
+	private String proposition;
 	
 	public Rapporteur(String email, String password, String name, String signature, Application application)
 	{
@@ -17,8 +18,8 @@ public class Rapporteur extends Member {
 	public void propose() 
 	{
 		System.out.print("Please propose the application with ID " + application.getId() + ": ");
-		String proposal = keyboard.next();
-		application.setProposition(proposal);
+		proposition = keyboard.next();
+		application.setProposition(proposition);
 	}
 
 }

@@ -13,6 +13,4 @@ public class Secretary extends User {
 		application.setStatus(status);
 	}
 
-
-
 }

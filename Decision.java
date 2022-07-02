@@ -8,6 +8,7 @@ public class Decision {
 	private String signature;
 	private ArrayList<Member> members;
 	private Rapporteur rapporteur;
+	private Member repporteur;
 
 	/* Methods */
 	
@@ -59,5 +60,4 @@ public class Decision {
 	public void addVote(boolean vote) {
 		this.vote.add(vote);
 	}
-	
 }
