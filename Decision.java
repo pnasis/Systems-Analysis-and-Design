@@ -8,12 +8,11 @@ public class Decision {
 	private String signature;
 	private ArrayList<Member> members;
 	private Rapporteur rapporteur;
-	private Member repporteur;
 
 	/* Methods */
 	
 	// Constructor
-	public Decision ()
+	public Decision()
 	{
 		vote = new ArrayList<>();
 		comments = new ArrayList<>();
@@ -34,14 +33,13 @@ public class Decision {
 		return members;
 	}
 
-	
-	public Member getRapporteur() {
+	public Rapporteur getRapporteur() {
 		return rapporteur;
 	}
 
 	// Setters
-	public void setRapporteur(Member rapporteur) {
-		this.rapporteur = (Rapporteur) rapporteur;
+	public void setRapporteur(Rapporteur rapporteur) {
+		this.rapporteur = rapporteur;
 	}
 	
 	public void setSignature(String signature) {

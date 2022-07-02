@@ -45,15 +45,15 @@ public class Application {
 	}
 
 	public String getId() {
-		return this.id;
+		return id;
 	}
 
 	public String getDate() {
-		return this.date;
+		return date;
 	}
 
 	public String getProposition() {
-		return this.proposition;
+		return proposition;
 	}
 
 	public String getCurrentStatus() {
@@ -95,7 +95,6 @@ public class Application {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-
 
 	public void setDecision(Decision decision) {
 		this.decision = decision;
